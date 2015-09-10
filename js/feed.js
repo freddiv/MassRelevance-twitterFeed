@@ -16,8 +16,6 @@ function refresh(listEl, lastID, limit,feed, interval ) {
 		  url: feedUrl, 
           success: function(data) {
 				for (var i=0,  tot=data.length; i < tot; i++) {
-				  console.log(data[i]); 
-				  console.log(listEl); 
 				  var tweet = data[i];
 				  
 				  if(lastID === ""){
@@ -26,9 +24,7 @@ function refresh(listEl, lastID, limit,feed, interval ) {
 						if( html.length ) listEl.html( html ); 
 				  }
 					else{
-					console.log(listEl.find('blockquote'));
-					listEl.prepend('<blockquote class="twitter-tweet">' + tweet.text + '<p>Tweeted by: ' + tweet.user.name + '</p><p>' + tweet.created_at + '</p></blockquote>');
-	                console.log(listEl.find('li'));				
+					listEl.prepend('<blockquote class="twitter-tweet">' + tweet.text + '<p>Tweeted by: ' + tweet.user.name + '</p><p>' + tweet.created_at + '</p></blockquote>');		
 	                }
 				}
 
