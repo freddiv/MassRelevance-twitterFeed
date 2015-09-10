@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+   <title>Massrelevance Twitter Feeds</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">	
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/tweets.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Massrelevance Twitter Feeds</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+	     <div class=”container”>
+          <p>
+          Code Challenge: implement the widget, which will render N last tweets from the given JSON feed into specified HTML container. 
+          Widget should update the list with the specified interval, by adding new tweets and removing an equal number of tweets so the widget is always displaying N tweets.
+          Just new elements should be rendered; existed should not. Display time, author and message text for every list item.
+         </p>
+		</div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+		    <h2>Kindle Feed</h2>
+		
+		<div class="div-list-content">
+		    <div id="tweets-list" style="padding-left: 4px;margin-left:-5px;">
+		   
+		    </div>            
+       </div>
+        </div>
+        <div class="col-md-4">
+          <h2>Soccer Feed</h2>
+         <div class="div-list-content">
+		    <div id="tweets-list2" style="padding-left: 4px;margin-left:-5px;">
+		   
+		    </div>
+        </div>
+       </div>
+        <div class="col-md-4">
+          <h2>Details</h2>
+
+         <p>Arguments to accept:
+           <ol>
+             <li>listEl: the element where the feed will be displayed</li>
+             <li>lastID: the id of the most recent rendered tweet-this defaults to "" and is updated whenever the feed is updated. Pass this to the api to return only the tweets newer than this tweet</li>
+             <li>limit: Amount on list items to render - defaults to 20</li>
+             <li>feed: the JSON feed URL - defaults to the kindle feed.</li>
+             <li>interval: The interval to update feed (* 1000)</li>
+           </ol>
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy;  2015</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Latest compiled and minified JavaScript -->
+     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+ 	
+ 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/script.js/2.4.0/script.min.js"></script>
+ 	
+  
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/feed.js"></script>
+
+
+
+		
+  </body>
+</html>
