@@ -20,14 +20,16 @@ function refresh(listEl, lastID, limit,feed, interval ) {
 				  
 				  if(lastID === ""){
 					  html = html + '<blockquote class="twitter-tweet">' + tweet.text + '<p>Tweeted by: ' + tweet.user.name + '</p><p>' + tweet.created_at + '</p></blockquote>';
-					// update list with original feed return 
-						if( html.length ) listEl.html( html ); 
+					
 				  }
 					else{
 					listEl.prepend('<blockquote class="twitter-tweet">' + tweet.text + '<p>Tweeted by: ' + tweet.user.name + '</p><p>' + tweet.created_at + '</p></blockquote>');		
 	                }
 				}
-
+				
+			// update list with original feed return 
+			if( html.length && lastID === "" ) listEl.html( html ); 
+				
 	        // remove any tweets from the list over the limit
 	        listEl.find('blockquote').slice(limit).remove();
 	        // update last id with value back from server/API 
